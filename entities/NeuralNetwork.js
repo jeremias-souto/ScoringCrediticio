@@ -1,6 +1,7 @@
 class NeuralNetwork {
-    constructor(neuronsList) {
+    constructor(neuronsList, threshold) {
         this.neuronsList = neuronsList;
+        this.threshold = threshold;
     }
 
     getNeuronsList() {
@@ -16,6 +17,6 @@ class NeuralNetwork {
     }
 
     activationFunction() {
-        return this.sum() >= 4;
+        return this.sum() >= this.threshold;
     }
 }

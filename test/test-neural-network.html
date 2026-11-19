@@ -15,7 +15,8 @@
         QUnit.module('getNeuronsList', function () {
             QUnit.test('the result must be []', function (assert) {
                 const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
-                const neuralNetwork = new NeuralNetwork(neuronsList);
+                const threshold = 4;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
                 assert.equal(neuralNetwork.getNeuronsList(), neuronsList);
             });
         });
@@ -23,7 +24,8 @@
         QUnit.module('sum', function () {
             QUnit.test('the result must be 5', function (assert) {
                 const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
-                const neuralNetwork = new NeuralNetwork(neuronsList);
+                const threshold = 4;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
                 assert.equal(neuralNetwork.sum(), 5);
             });
         });
@@ -31,7 +33,8 @@
         QUnit.module('activationFunction', function () {
             QUnit.test('the result must be true', function (assert) {
                 const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
-                const neuralNetwork = new NeuralNetwork(neuronsList);
+                const threshold = 4;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
                 assert.equal(neuralNetwork.activationFunction(), true);
             });
         });
