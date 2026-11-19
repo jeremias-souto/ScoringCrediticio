@@ -12,6 +12,15 @@
     <script src="../entities/NeuralNetwork.js"></script>
     
     <script>
+        QUnit.module('getThreshold', function () {
+            QUnit.test('the result must be 4', function (assert) {
+                const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
+                const threshold = 4;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
+                assert.equal(neuralNetwork.getThreshold(), threshold);
+            });
+        });
+        
         QUnit.module('getNeuronsList', function () {
             QUnit.test('the result must be []', function (assert) {
                 const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];

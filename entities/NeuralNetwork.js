@@ -4,6 +4,10 @@ class NeuralNetwork {
         this.threshold = threshold;
     }
 
+    getThreshold() {
+        return this.threshold;
+    }
+
     getNeuronsList() {
         return this.neuronsList;
     }
