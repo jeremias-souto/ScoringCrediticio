@@ -19,6 +19,14 @@
                 assert.equal(neuralNetwork.getNeuronsList(), neuronsList);
             });
         });
+
+        QUnit.module('sum', function () {
+            QUnit.test('the result must be 5', function (assert) {
+                const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
+                const neuralNetwork = new NeuralNetwork(neuronsList);
+                assert.equal(neuralNetwork.sum(), 5);
+            });
+        });
     </script>
 
 </body>
