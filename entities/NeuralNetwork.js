@@ -14,4 +14,8 @@ class NeuralNetwork {
         }
         return total;
     }
+
+    activationFunction() {
+        return this.sum() >= 4;
+    }
 }
