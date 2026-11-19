@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Neuron Test</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-3.0.0.css">
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-3.0.0.js"></script>
+
+    <script src="../entities/Neuron.js"></script>
+    
+    <script>
+        QUnit.module('getValue', function () {
+            QUnit.test('the result must be 1', function (assert) {
+                const neuron = new Neuron(1, 3);
+                assert.equal(neuron.getValue(), 1);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -3,4 +3,8 @@ class Neuron {
         this.value = value;
         this.weight = weight;
     }
+
+    getValue() {
+        return this.value;
+    }
 }
