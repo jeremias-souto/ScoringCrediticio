@@ -17,6 +17,13 @@
                 assert.equal(neuron.getValue(), 1);
             });
         });
+
+        QUnit.module('getWeight', function () {
+            QUnit.test('the result must be 3', function (assert) {
+                const neuron = new Neuron(1, 3);
+                assert.equal(neuron.getWeight(), 3);
+            });
+        });
     </script>
 
 </body>

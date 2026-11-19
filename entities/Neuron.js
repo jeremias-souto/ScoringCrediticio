@@ -7,4 +7,8 @@ class Neuron {
     getValue() {
         return this.value;
     }
+    
+    getWeight() {
+        return this.weight;
+    }
 }
