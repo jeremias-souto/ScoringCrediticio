@@ -11,4 +11,8 @@ class Neuron {
     getWeight() {
         return this.weight;
     }
+
+    multiply() {
+        return this.getValue() * this.getWeight();
+    }
 }
