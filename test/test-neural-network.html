@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>NeuralNetwork Test</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-3.0.0.css">
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-3.0.0.js"></script>
+
+    <script src="../entities/Neuron.js"></script>
+    <script src="../entities/NeuralNetwork.js"></script>
+    
+    <script>
+        QUnit.module('getNeuronsList', function () {
+            QUnit.test('the result must be []', function (assert) {
+                const neuronsList = [new Neuron(1, 3), new Neuron(0, 1), new Neuron(1, 2)];
+                const neuralNetwork = new NeuralNetwork(neuronsList);
+                assert.equal(neuralNetwork.getNeuronsList(), neuronsList);
+            });
+        });
+    </script>
+
+</body>
+</html>
