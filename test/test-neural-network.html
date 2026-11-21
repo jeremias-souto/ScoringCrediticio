@@ -49,6 +49,24 @@
                 assert.equal(neuralNetwork.activationFunction(), result);
             });
         });
+
+        // CASO DE PRUEBA N°1: Javier Diaz
+        // - cobras 1000usd o más mensualmente? NO
+        // - sos argentino? NO
+        // - estas casado/a? NO
+        // - tenes hijos? SI
+        // - tenes deudas? SI
+        // - tenes propiedades a tu nombre? SI
+        // RESULTADO ESPERADO: true
+        QUnit.module('Test Case N°1', function () {
+            QUnit.test('the result must be true', function (assert) {
+                const neuronsList = [new Neuron(0, 3), new Neuron(0, 1), new Neuron(0, 2), new Neuron(1, -2), new Neuron(1, -50), new Neuron(1, 100)];
+                const threshold = 6;
+                const result = true;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
+                assert.equal(neuralNetwork.activationFunction(), result);
+            });
+        });
     </script>
 
 </body>
