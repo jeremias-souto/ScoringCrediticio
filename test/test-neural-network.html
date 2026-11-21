@@ -67,6 +67,24 @@
                 assert.equal(neuralNetwork.activationFunction(), result);
             });
         });
+
+        // CASO DE PRUEBA N°2: Lucia Sanchez
+        // - cobras 1000usd o más mensualmente? SI
+        // - sos argentino? SI
+        // - estas casado/a? SI
+        // - tenes hijos? NO
+        // - tenes deudas? SI
+        // - tenes propiedades a tu nombre? NO
+        // RESULTADO ESPERADO: false
+        QUnit.module('Test Case N°2', function () {
+            QUnit.test('the result must be true', function (assert) {
+                const neuronsList = [new Neuron(1, 3), new Neuron(1, 1), new Neuron(1, 2), new Neuron(0, -2), new Neuron(1, -50), new Neuron(0, 100)];
+                const threshold = 6;
+                const result = false;
+                const neuralNetwork = new NeuralNetwork(neuronsList, threshold);
+                assert.equal(neuralNetwork.activationFunction(), result);
+            });
+        });
     </script>
 
 </body>
